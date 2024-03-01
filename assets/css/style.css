@@ -1,0 +1,93 @@
+.container {
+    background-image: url('/assets/img/bg_pc.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100vw;
+    height: 185vw;
+}
+
+.trailer {
+    position: relative;
+    top: 24vw;
+    left: 34vw;
+}
+/* Register */
+.register {
+    margin: 32vw 0 0;
+}
+
+.register__title {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 1.9vw;
+}
+
+.register__nav {
+    display: flex;
+    justify-content: center;
+}
+
+.register__direct--icon {
+
+}
+
+.register__download {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.register__download--item {
+
+}
+
+.register__nav--card {
+
+}
+
+/* Progres */
+.progress {
+    margin: 1vw 15vw 0;
+}
+
+.progress__quantity {
+    margin: 0 27vw 13.5vw;
+    display: flex;
+    justify-content: center;
+    background-color: #ceceec;
+    border-radius: 5px;
+}
+
+.progress__container {
+    width: 100%;
+    background-image: url('/assets/img/thanhtiendo-off.png');
+    background-repeat: no-repeat;
+    margin: 20px 0;
+}
+
+.progress__bar {
+    width: 0%;
+    height: 5vw;
+    background-image: url('/assets/img/thanhtiendo-on.png');
+    background-repeat: no-repeat;
+    transition: width 0.5s ease;
+}
+
+.progress__gifts {
+    display: flex;
+    justify-content: space-around;
+    margin: -8vw 2vw 0;
+}
+
+.progress__gifts--item {
+    filter: grayscale(1);
+}
+
+.active {
+    filter: grayscale(0);
+}
+
+
+
+
+
+
