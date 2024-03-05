@@ -1,19 +1,24 @@
+.hide {
+    display: none;
+}
+
 .container {
     background-image: url('/assets/img/bg_pc.jpg');
     background-repeat: no-repeat;
     background-size: cover;
     width: 100vw;
-    height: 185vw;
+    height: 190vw;
 }
 
 .trailer {
     position: relative;
     top: 24vw;
-    left: 34vw;
+    left: 35vw;
+    width: 10vw;
 }
 /* Register */
 .register {
-    margin: 32vw 0 0;
+    margin: 33vw 0 0;
 }
 
 .register__title {
@@ -25,6 +30,7 @@
 .register__nav {
     display: flex;
     justify-content: center;
+    align-items: center;
 }
 
 .register__direct--icon {
@@ -34,14 +40,6 @@
 .register__download {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-}
-
-.register__download--item {
-
-}
-
-.register__nav--card {
-
 }
 
 /* Progres */
@@ -85,6 +83,105 @@
 .active {
     filter: grayscale(0);
 }
+
+/* Sprinner */
+.spinner {
+    margin: 10vw 20vw 0;
+}
+
+.spinner-title {
+    margin: 0 20vw 1vw;
+    display: flex;
+    justify-content: center;
+    background-color: #ceceec;
+    border-radius: 5px;
+}
+
+
+.regulations-history {
+    position: relative;
+    bottom: 2vw;
+    left: 42vw;
+    width: 24vw;
+    background-image: url(/assets/img/bg-thele-lichsu.png);
+    background-repeat: no-repeat;
+    z-index: 2;
+}
+
+.routers {
+    display: block;
+    width: 20vw;
+}
+
+.routers a {
+    display: flex;
+}
+
+.roulette-container {
+    position: relative;
+    bottom: 37vw;
+    left: 20vw;
+    width: 40vw;
+    height: 40vw;
+    background-image: url(/assets/img/bg-vongquay.png);
+    background-repeat: no-repeat;
+    overflow: hidden;
+}
+
+
+.roulette {
+    position: absolute;
+    top: 25%;
+    left: 7%;
+    width: 58%;
+    height: 58%;
+    background-image: url(/assets/img/vongquay.png);
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+
+#spinBtn {
+    position: absolute;
+    top: 42%;
+    left: 29%;
+}
+
+.spin-animation {
+    transition: all .1s linear;
+    animation: spin 1.5s linear infinite;
+}
+  
+@keyframes spin {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+}
+
+/* Info */
+.info-container {
+    margin-top: -22vw;
+    display: flex;
+    justify-content: center;
+}
+
+.sub-info {
+    margin-right: 6%;
+}
+
+.sub-info__item {
+    margin-top: 1vw;
+    cursor: pointer;
+    filter: grayscale(1);
+}
+
+.active {
+    filter: grayscale(0);
+}
+
+  
 
 
 

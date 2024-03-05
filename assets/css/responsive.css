@@ -1,0 +1,194 @@
+/* Tablets & Mobile (max 991px) */
+@media (max-width: 991px) {
+    .hide-on-pc-tablet {
+        display: none;
+    }
+    .container {
+        background-image: url(/assets/img/bg_m1.jpg);
+        width: 100vw;
+        height: 488vw;
+    }
+    .trailer {
+        top: 89vw;
+        left: 10vw;
+    }
+    .trailer img {
+        width: 15%;
+    }
+    .register {
+        margin: 78vw 0 0;
+    }
+    .register a {
+        display: flex;
+        justify-content: center;
+    }
+    .register img {
+        width: 45%;
+    }
+    .register__nav-mob {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .register__nav-mob-item img {
+        width: 70%;
+    }
+    .progress {
+        margin: 19vw 8vw 0;
+    }
+    .progress__quantity {
+        font-size: .8rem;
+        margin: 0 10vw 0;
+    }
+    .progress__bar {
+        height: 10vw;
+    }
+    .progress__gifts--item {
+        width: 10%;
+
+    }
+    .progress__container {
+        background-size: 100%;
+        /* margin: 0; */
+    }
+    .progress__bar {
+        background-size: 200%;
+    }
+    .progress__gifts {
+        margin: -17vw 2vw 0;
+    }
+    .spinner {
+        margin: 22vw 0 0;
+    }
+    .spinner-title {
+        font-size: .8rem;
+    }
+    .regulations-history {
+        position: relative;
+        bottom: 0vw;
+        left: 27vw;
+        width: 90%;
+        background-image: none;
+        background-repeat: no-repeat;
+    }
+    .regulations-history {
+        margin: 1vw 0 100vw;
+    }
+    .regulations-history img {
+        width: 25%;
+    }
+    .roulette-container {
+        bottom: 130vw;
+        left: 7vw;
+        width: 86vw;
+        height: 100vw;
+        background-size: 100%;
+    }
+    .routers {
+        display: grid;
+        justify-content: center;
+        grid-template-columns: repeat(3, 1fr);
+        width: 100%;
+    }
+    .spinner-title {
+        margin: 0 20vw 0;
+    }
+    #spinBtn {
+        top: 42%;
+        left: 32%;
+    }
+    #spinBtn img {
+        width: 44%;
+    }
+    .routers img {
+        width: 100%;
+    }
+    .roulette {
+        top: 23%;
+        left: 8%;
+        width: 61%;
+        height: 53%;
+    }
+    .info-container {
+        display: grid;
+        margin-top: -55vw;
+    }
+    .sub-info {
+        display: flex;
+        margin: 0 10vw;
+    }
+    .sub-info img {
+        width: 90%;
+    }
+    .info-detail img {
+        width: 100%;
+    }
+    /* .sub-info img {
+       width: 10%;
+    } */
+}
+  
+/* Laptops (992px to 1199px) */
+@media (min-width: 992px) and (max-width: 1599px) {
+    .trailer {
+        top: 23vw;
+    }
+    .register {
+        margin: 31vw 0 0;
+    }
+    .register__title {
+        margin-bottom: 3vw;
+    }
+    .register__title a {
+        display: flex;
+        justify-content: center;
+    }
+    .register__title img {
+        width: 70%;
+    }
+    .register__nav {
+        margin: 0 30vw;
+    }
+    .register__direct--icon {
+        margin-left: 3vw;
+    }
+    .register__direct--icon img,
+    .register__nav--card img,
+    .register__download--item img {
+        width: 80%;
+    }
+    .progress__quantity {
+        font-size: 1rem;
+        margin: 0 25vw 10vw;
+    }
+    .progress__bar {
+        height: 4vw;
+    }
+    .progress__gifts {
+        margin: -7vw 2vw 0;
+    }
+    .progress__gifts img {
+        width: 8vw;
+    }
+    .spinner {
+        margin: 13vw 20vw 0;
+    }
+    #spinBtn {
+        top: 40%;
+        left: 27%;
+    }
+    .routers img {
+        width: 70%;
+    }
+    .roulette-container {
+        bottom: 35vw;
+        left: 20vw;
+        background-size: 94%;
+    }
+    .info-container {
+        margin-top: -19vw;
+    }
+    .info-container img {
+        width: 90%;
+    }
+}
+  
