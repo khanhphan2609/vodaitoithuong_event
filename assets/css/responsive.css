@@ -1,96 +1,103 @@
 /* Tablets & Mobile (max 991px) */
 @media (max-width: 991px) {
-    .hide-on-pc-tablet {
+    #wrapper .hide-on-mob-tablet {
         display: none;
     }
-    .container {
-        background-image: url(/assets/img/bg_m1.jpg);
+    #wrapper {
+        background-image: url(/assets/img/bg_m.webp);
         width: 100vw;
         height: 488vw;
     }
-    .trailer {
-        top: 89vw;
+    #wrapper .trailer img {
+        width: 100%;
+        top: 96vw;
         left: 10vw;
-    }
-    .trailer img {
         width: 15%;
     }
-    .register {
-        margin: 78vw 0 0;
+    #wrapper  .register {
+        margin: 86vw 0 0;
     }
-    .register a {
+    #wrapper .register a {
         display: flex;
         justify-content: center;
     }
-    .register img {
+    #wrapper  .register img {
         width: 45%;
     }
-    .register__nav-mob {
+    #wrapper  .register__nav-mob {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
     }
-    .register__nav-mob-item img {
-        width: 70%;
+    #wrapper  .register__nav-mob-item img {
+        width: 90%;
     }
-    .progress {
-        margin: 19vw 8vw 0;
+    #wrapper .progress__wrapper {
+        margin: 18vw 8vw 19vw;
     }
-    .progress__quantity {
-        font-size: .8rem;
-        margin: 0 10vw 0;
+        
+    #wrapper .progress__quantity {
+        padding: 6px;
+        font-size: 1.4rem;
+        margin: 0 3vw 10vw;
     }
-    .progress__bar {
-        height: 10vw;
+    #wrapper .progress__bar {
+        padding: 9px 0;
     }
-    .progress__gifts--item {
+    #wrapper .progress__gifts--item {
         width: 10%;
 
     }
-    .progress__container {
+    #wrapper .progress__container {
         background-size: 100%;
         /* margin: 0; */
     }
-    .progress__bar {
-        background-size: 200%;
+    #wrapper .progress__gifts {
+        margin: -12vw 2vw 0;
     }
-    .progress__gifts {
-        margin: -17vw 2vw 0;
-    }
-    .spinner {
-        margin: 22vw 0 0;
+    #wrapper .spinner {
+        margin: 10vw 10vw 0;
+
     }
     .spinner-title {
-        font-size: .8rem;
+        font-size: 1.6rem;
+        margin: 0 1vw;
     }
-    .regulations-history {
+    #wrapper .regulations-history {
         position: relative;
-        bottom: 0vw;
-        left: 27vw;
+        padding: 4px;
+        bottom: -3vw;
+        left: 4vw;
         width: 90%;
         background-image: none;
         background-repeat: no-repeat;
     }
-    .regulations-history {
-        margin: 1vw 0 100vw;
-    }
-    .regulations-history img {
-        width: 25%;
-    }
-    .roulette-container {
-        bottom: 130vw;
-        left: 7vw;
+    #wrapper .roulette-container {
+        bottom: 20vw;
+        left: -4vw;
         width: 86vw;
         height: 100vw;
         background-size: 100%;
     }
-    .routers {
-        display: grid;
+    #wrapper .routers {
+        position: relative;
+        top: 99vw;
+        width: 100%;
+        display: flex;
         justify-content: center;
-        grid-template-columns: repeat(3, 1fr);
+        align-items: center;
+        flex-wrap: wrap;
+    }
+    #wrapper .routers a {
+        /* display: flex; */
+        width: 100px;
+    }
+    #wrapper .routers img {
         width: 100%;
     }
-    .spinner-title {
-        margin: 0 20vw 0;
+    #wrapper .spinner-title {
+        margin: 0 16vw 0;
+        padding: 6px;
+        font-size: 1.4rem;
     }
     #spinBtn {
         top: 42%;
@@ -99,32 +106,84 @@
     #spinBtn img {
         width: 44%;
     }
-    .routers img {
+    #wrapper .routers img {
         width: 100%;
     }
-    .roulette {
+    #wrapper .roulette {
         top: 23%;
         left: 8%;
         width: 61%;
         height: 53%;
     }
-    .info-container {
+    #wrapper .info-container {
         display: grid;
-        margin-top: -55vw;
+        margin-top: 27vw;
     }
-    .sub-info {
+    #wrapper .sub-info {
         display: flex;
         margin: 0 10vw;
     }
-    .sub-info img {
+    #wrapper .sub-info img {
         width: 90%;
     }
-    .info-detail img {
+    #wrapper .info-detail img {
         width: 100%;
     }
-    /* .sub-info img {
-       width: 10%;
-    } */
+    
+    /* Modal */
+    .modal-dialog {
+        margin: 50% 2%;
+    }
+    .modal-content {
+        width: 96vw;
+    }
+    
+    .modal-bg {
+        background-color: transparent !important;
+        background-image: url(/assets/img/bg_popup.png);
+        background-repeat: no-repeat;
+        color: #fff;
+        background-size: 100%;
+    }
+    .content-table-dialog {
+        margin: 0 6vw;
+    }
+    button.close {
+        margin: 5vw;
+        font-size: 30px;
+    }
+    .modal-title {
+        font-weight: 400;
+        font-size: 20px;
+        padding: 6% 0 0% 12%;
+        margin: 0;
+    }
+    .modal-input {
+        width: 100%;
+        font-size: 14px;
+        padding: 12px;
+        border-radius: 2px;
+        color: #000;
+    }
+    .modal-submit {
+        padding: 7px 40%;
+        margin: 6% 0;
+        font-size: 18px;
+    }
+
+    /* Dialog Video */
+    .close-video {
+        margin: -5% !important;
+        margin-top: -10% !important;
+    }
+    .modal_video-content {
+        width: 90vw;
+        margin: 66vw 3vw 0 4vw;
+    }
+    .modal-dialog_video iframe {
+        width: 92vw;
+        height: 51vw;
+    }
 }
   
 /* Laptops (992px to 1199px) */
@@ -154,10 +213,11 @@
     .register__direct--icon img,
     .register__nav--card img,
     .register__download--item img {
-        width: 80%;
+        width: 84%;
     }
     .progress__quantity {
-        font-size: 1rem;
+        padding: .5vw 0;
+        font-size: 1.5rem;
         margin: 0 25vw 10vw;
     }
     .progress__bar {
@@ -170,7 +230,7 @@
         width: 8vw;
     }
     .spinner {
-        margin: 13vw 20vw 0;
+        margin: 8vw 20vw 0;
     }
     #spinBtn {
         top: 40%;
@@ -185,7 +245,7 @@
         background-size: 94%;
     }
     .info-container {
-        margin-top: -19vw;
+        margin-top: -20vw;
     }
     .info-container img {
         width: 90%;

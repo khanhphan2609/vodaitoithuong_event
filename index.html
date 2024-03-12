@@ -4,15 +4,29 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Vo Dai Toi Thuong</title>
+    <link rel="icon" type="image/x-icon" href="/assets/img/Icon_And_New.png">
+
+    <!-- Add SweetAlert library -->
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <!-- Add jQuery library -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
 
     <link rel="stylesheet" href="/assets/css/base.css">
     <link rel="stylesheet" href="/assets/css/style.css">
     <link rel="stylesheet" href="/assets/css/responsive.css">
 </head>
 <body>
-    <div class="container">
+    <div id="wrapper">
+        <div class="navbar__wrapper">
+            <ul class="navbar__list">
+                <li class="navbar__item"><a href="">Home</a></li>
+                <li class="navbar__item"><a href="">Fanpage</a></li>
+                <li class="navbar__item"><a href="">Group</a></li>
+            </ul>
+        </div>
+
         <div class="trailer">
-            <a href="javascript:void(0)"><img src="/assets/img/btn-trailer.png" alt=""></a>
+            <a href="javascript:void(0)" id="trailer"><img src="/assets/img/btn-trailer.png" alt=""></a>
         </div>
 
         <div class="register">
@@ -20,9 +34,9 @@
                 <a href="javascript:void(0)"><img src="/assets/img/btn-dangky.png" alt=""></a>
             </div>
 
-            <div class="register__nav hide-on-pc-tablet">
+            <div class="register__nav hide-on-mob-tablet">
                 <div class="register__direct--icon">
-                    <a href="javascript:void(0)"><img src="/assets/img/Iconpng.png" alt=""></a>
+                    <a href=""><img src="/assets/img/Iconpng.png" alt=""></a>
                 </div>
                 <div class="register__download">
                     <div class="register__download--item">
@@ -43,18 +57,18 @@
                 </div>
             </div>
 
-            <div class="register__nav-mob hide">
+            <div class="register__nav-mob hide-on-pc">
                 <div class="register__nav-mob-item">
                     <a href="javascript:void(0)"><img src="/assets/img/btn-napthe-mb.png" alt=""></a>
                 </div>
                 <div class="register__nav-mob-item">
-                    <a href="javascript:void(0)"><img src="/assets/img/download-btn/btn-ios.png" alt=""></a>
+                    <a href="javascript:void(0)"><img src="/assets/img/download-btn/btn-ios.png" alt="" id="download-img"></a>
                 </div>
             </div>
         </div>
 
-        <div class="progress">
-            <h3 class="progress__quantity">Số Chiến Binh Đã Gia Nhập: </h3>
+        <div class="progress__wrapper">
+            <h3 class="progress__quantity">Số Chiến Binh Đã Gia Nhập: 1300000</h3>
 
             <div class="progress__container">
                 <div class="progress__bar"  id="progressBar"></div>
@@ -75,10 +89,10 @@
                 
 
         <div class="spinner">
-            <h3 class="spinner-title">Số lượt quay: </h3>
+            <h3 class="spinner-title">Số lượt quay: 10</h3>
             <div class="regulations-history">
-                <a href="javascript:void(0)"><img src="/assets/img/btn-thele.png" alt=""></a>
-                <a href="javascript:void(0)"><img src="/assets/img/btn-lichsu.png" alt=""></a>
+                <a href="javascript:void(0)" id="regulations"><img src="/assets/img/btn-thele.png" alt=""></a>
+                <a href="javascript:void(0)" id="history"><img src="/assets/img/btn-lichsu.png" alt=""></a>
             </div>
             <div class="routers">
                 <a href="javascript:void(0)"><img src="/assets/img/spinner-btn/btn-checkinlanding.png" alt=""></a>
@@ -122,8 +136,67 @@
         </div>
     </div>
 
+    <footer class="footer"></footer>
+
+
+    <!-- Modal Dialog -->
+        <!-- modal thele -->
+        <div class="modal fade" id="dialog_regulations" tabindex="-1" role="dialog" 
+        aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-bg">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">X</span>
+                    </button>
+                    <div class="modal-text">
+                        <h3 class="modal-title" style="text-align:center;font-weight: bold;">THE LE</h3>
+                        <div class="content-table-dialog">
+                            <p>...</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+
+        <!-- modal history -->
+        <div class="modal fade" id="dialog_history" tabindex="-1" role="dialog" 
+        aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-bg">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">X</span>
+                    </button>
+                    <div class="modal-text">
+                        <h3 class="modal-title" style="text-align:center;font-weight: bold;">LICH SU</h3>
+                        <div class="content-table-dialog">
+                            <p>...</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+
+    <!-- Play -->
+    <div class="modal fade" id="dialog_video" tabindex="-1" role="dialog" 
+        aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+        <div class="modal-dialog_video modal-dialog-centered" role="document" style="background-image: none;">
+            <div class="modal_video-content">
+                <div class="modal_video-bg">
+                    <button type="button" class="close close-video" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">X</span>
+                    </button>
+                    <iframe src="https://www.youtube.com/embed/sJt_i0hOugA?si=2qZwhKEvqDhbTW8g" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                 </div>
+            </div>
+        </div>
+    </div>
 
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
     <script src="/assets/js/main.js"></script>
 </body>
 </html>

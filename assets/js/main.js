@@ -1,5 +1,5 @@
 $(document).ready(function() {
-    var quantity = 180000;
+    var quantity = 100000;
     ProgressBar(quantity)
 
     $('#spinBtn').on('click', function() {
@@ -12,6 +12,26 @@ $(document).ready(function() {
 
         $(this).addClass('active')
     });
+
+    $(document).on('click', '#trailer', function() {
+        DialogVideo();
+    });
+
+    $(document).on('click', '#regulations', function() {
+        DialogRegulations();
+    });
+
+    $(document).on('click', '#history', function() {
+        DialogHistory();
+    });
+
+    $('.register').on('click', 'a', function() {
+        CommingSoon();
+    });
+    $('.routers').on('click', 'a', function() {
+        CommingSoon();
+    });
+    CheckDevides();
 });
 
 function ProgressBar(quantity) {
@@ -19,7 +39,10 @@ function ProgressBar(quantity) {
     var progress;
 
     // Active Gifts
-    if (quantity >= 1300000) {
+    if (quantity > 1500000) {
+        $('.progress__gifts--item:lt(7)').addClass('active');
+        progress = 100;
+    } else if (quantity >= 1300000) {
         $('.progress__gifts--item:lt(7)').addClass('active');
         progress = (quantity / maxQuantity) * 90;
     } else if (quantity >= 900000) {
@@ -36,4 +59,62 @@ function ProgressBar(quantity) {
         progress = (quantity / maxQuantity) * 350;
     } else if (quantity >= 70000) {
         $('.progress__gifts--item:lt(2)').addClass('active');
-        p
+        progress = (quantity / maxQuantity) * 450;
+    } else if (quantity >= 20000) {
+        $('.progress__gifts--item:lt(1)').addClass('active');
+        progress = (quantity / maxQuantity) * 550; 
+    } else {
+        progress = (quantity / maxQuantity) * 550; 
+    }
+
+    $('.progress__bar').css('width', progress + '%');
+    
+};
+
+function Spin() {
+    $('.roulette').addClass('spin-animation');
+    var transformValue;
+
+    // Khi quay hoàn thành, lưu lại góc quay cuối cùng
+    setTimeout(function() {
+        transformValue = $('.roulette').css('transform').split(' ')[3].replace(/[,]/g, '') * 360;
+        console.log(transformValue);
+
+        // Sau khi quay hoàn thành, loại bỏ lớp spin-animation và đặt lại góc quay
+        setTimeout(function() {
+            $('.roulette').removeClass('spin-animation').css('transform', 'rotate(' + transformValue + 'deg)');
+        }, 1500); // 1.5 giây, thời gian quay và ứng dụng góc quay cuối cùng
+
+    }, 1500); // 1.5 giây, thời gian quay
+}
+
+function ChangeInfo() {
+    $('.info-detail img').attr('src', '/assets/img/detail/' + $(this).data('avata') + '.webp');
+    $('.sub-info').find('.sub-info__item').removeClass('active');
+
+    $(this).addClass('active');
+}
+
+function DialogVideo() {
+    $('#dialog_video').modal('toggle');
+};
+
+function DialogRegulations() {
+    $('#dialog_regulations').modal('toggle');
+};
+
+function DialogHistory() {
+    $('#dialog_history').modal('toggle');
+}
+function CommingSoon() {
+    swal("Comming Soon!");
+}
+
+function CheckDevides() {
+    var isAndroid = /Android/i.test(navigator.userAgent);
+
+    if (isAndroid) {
+        console.log(1)
+        $('#download-img').attr('src', '/assets/img/download-btn/btn-android.png');
+    }
+}
