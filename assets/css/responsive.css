@@ -6,16 +6,16 @@
     #wrapper {
         background-image: url(/assets/img/bg_m.webp);
         width: 100vw;
-        height: 488vw;
+        height: 430vw;
     }
     #wrapper .trailer img {
         width: 100%;
-        top: 96vw;
+        top: 90vw;
         left: 10vw;
         width: 15%;
     }
     #wrapper  .register {
-        margin: 86vw 0 0;
+        margin: 78vw 0 0;
     }
     #wrapper .register a {
         display: flex;
@@ -117,7 +117,7 @@
     }
     #wrapper .info-container {
         display: grid;
-        margin-top: 27vw;
+        margin-top: 15vw;
     }
     #wrapper .sub-info {
         display: flex;
