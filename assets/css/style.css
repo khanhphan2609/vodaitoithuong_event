@@ -1,4 +1,4 @@
-#wrapper .hide-on-pc {
+.hide-on-pc {
     display: none;
 }
 
@@ -20,6 +20,7 @@
     text-align: center;
     text-decoration: none;
     margin: 0;
+    min-height: 3vw;
 }
 
 .navbar__item {
@@ -28,6 +29,7 @@
 
 .navbar__list a {
     color: #fff;
+    font-weight: 700;
 }
 
 .navbar__list a:hover {
@@ -45,8 +47,8 @@
 
 .trailer img {
     position: relative;
-    top: 19vw;
-    left: 31vw;
+    top: 10vw;
+    left: 17vw;
     width: 10vw;
     animation: zoomIn 1.6s infinite;
     transition: all 1s ease-in;
@@ -60,21 +62,26 @@
         filter: brightness(1);
 
     }
-    100% {
+    50% {
         transform: scale(1); 
         filter: brightness(1.2);
+
+    }
+    100% {
+        transform: scale(.8);
+        filter: brightness(1);
 
     }
 }
 /* Register */
 #wrapper .register {
-    margin: 29vw 0 10vw;
+    margin: 28vw 0 10vw;
 }
 
 #wrapper .register__title {
     display: flex;
     justify-content: center;
-    margin-bottom: 1.9vw;
+    margin-bottom: 2vw;
 }
 
 #wrapper .register__direct--icon:hover,
@@ -87,7 +94,7 @@
     filter: brightness(1.3);
 }
 
-#wrapper .register__nav {
+.register__nav {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -109,11 +116,13 @@
 }
 
 #wrapper .progress__quantity {
-    margin: 0 24vw 5vw;
+    margin: 0 20vw 4vw;
     display: flex;
     justify-content: center;
     background-color: #ceceec;
     border-radius: 5px;
+    padding: 0.5vw 0;
+    font-size: 1.5rem;
 }
 
 #wrapper .progress__container {
@@ -136,7 +145,7 @@
 #wrapper .progress__gifts {
     display: flex;
     justify-content: space-around;
-    margin: -7.4vw 2vw 0;
+    margin: -6.6vw 2vw 0;
 }
 
 #wrapper .progress__gifts--item {
@@ -232,7 +241,7 @@
 
 /* Info */
 .info-container {
-    margin-top: -26vw;
+    margin-top: -23vw;
     display: flex;
     justify-content: center;
 }

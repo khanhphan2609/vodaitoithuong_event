@@ -32,6 +32,13 @@ $(document).ready(function() {
         CommingSoon();
     });
     CheckDevides();
+
+    $('#menu-icon').on('click', function() {
+        ShowMenuMob();
+    })
+    $('.menu-close').on('click', function() {
+        ShowMenuMob();
+    })
 });
 
 function ProgressBar(quantity) {
@@ -117,4 +124,9 @@ function CheckDevides() {
         console.log(1)
         $('#download-img').attr('src', '/assets/img/download-btn/btn-android.png');
     }
+}
+
+function ShowMenuMob() {
+    console.log(1);
+    $('.navbar__wrapper').toggleClass('hide-on-mob-tablet');
 }

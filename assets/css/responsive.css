@@ -1,7 +1,39 @@
 /* Tablets & Mobile (max 991px) */
 @media (max-width: 991px) {
-    #wrapper .hide-on-mob-tablet {
+    .hide-on-mob-tablet {
         display: none;
+    }
+    #wrapper #menu-icon {
+        z-index: 10;
+        float: right;
+        margin: 1vw 5vw;
+        background: transparent;
+        color: #000;
+        font-size: 10vw;
+        border: none;
+        display: block;
+    }
+    .menu-close {
+        display: block;
+        float: right;
+        padding: 1vw 6vw;
+        font-size: 4rem;
+    }
+    .navbar__wrapper {
+        position: fixed;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        height: 100vh;
+    }
+    .navbar__list {
+        display: block;
+        justify-content: center;
+        margin: 50vw auto;
+    }
+    .navbar__item {
+        margin: 5vw 0;
     }
     #wrapper {
         background-image: url(/assets/img/bg_m.webp);
@@ -79,6 +111,7 @@
         background-size: 100%;
     }
     #wrapper .routers {
+        z-index: 1;
         position: relative;
         top: 99vw;
         width: 100%;
@@ -204,6 +237,9 @@
     .register__title img {
         width: 70%;
     }
+    #wrapper .register__download--item {
+        width: 120%;
+    }
     .register__nav {
         margin: 0 30vw;
     }
@@ -214,6 +250,11 @@
     .register__nav--card img,
     .register__download--item img {
         width: 84%;
+    }
+
+    
+    #wrapper .progress__gifts {
+        margin: -7.4vw 2vw 0;
     }
     .progress__quantity {
         padding: .5vw 0;
@@ -230,7 +271,7 @@
         width: 8vw;
     }
     .spinner {
-        margin: 8vw 20vw 0;
+        margin: 9vw 20vw 0;
     }
     #spinBtn {
         top: 40%;

@@ -11,14 +11,18 @@
     <!-- Add jQuery library -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link rel="stylesheet" href="/assets/css/base.css">
     <link rel="stylesheet" href="/assets/css/style.css">
     <link rel="stylesheet" href="/assets/css/responsive.css">
 </head>
 <body>
     <div id="wrapper">
-        <div class="navbar__wrapper">
-            <ul class="navbar__list">
+        <button id="menu-icon" class="hide-on-pc"><i class="fa-solid fa-bars"></i></button>
+        <!-- hide-on-mob-tablet -->
+        <div class="navbar__wrapper hide-on-mob-tablet">
+            <div class="menu-close hide-on-pc"><i class="fa-solid fa-xmark"></i></div>
+            <ul class="navbar__list ">
                 <li class="navbar__item"><a href="">Home</a></li>
                 <li class="navbar__item"><a href="">Fanpage</a></li>
                 <li class="navbar__item"><a href="">Group</a></li>
